@@ -11,6 +11,7 @@ let gulp        = require('gulp'),
     sourcemaps  = require('gulp-sourcemaps'),
     rimraf      = require('rimraf'),
     watch       = require('gulp-watch'),
+    gutil       = require('gulp-util');
     reload      = browserSync.reload;
 
 
@@ -61,6 +62,7 @@ gulp.task('js:build', () => {
         .pipe(rigger())
         .pipe(sourcemaps.init())
         .pipe(uglify())
+        .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
         .pipe(babel({
             presets: ['env']
         }))
@@ -130,3 +132,5 @@ gulp.task('webserver', () => {
 gulp.task('clean', cb => {
     rimraf(path.clean, cb);
 });
+
+gulp.task('default', ['build', 'webserver', 'watch']);
