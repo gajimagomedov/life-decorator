@@ -89,3 +89,8 @@ gulp.task('image:build', () => {
         .pipe(gulp.dest(path.build.img))
         .pipe(reload({ stream: true }));
 });
+
+gulp.task('fonts:build', () => {
+    gulp.src(path.src.fonts)
+        .pipe(gulp.dest(path.build.fonts))
+});
