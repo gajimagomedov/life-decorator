@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/gus3inov/life-decorator#readme",
   "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
     "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
@@ -25,6 +27,7 @@
     "gulp-imagemin": "^3.4.0",
     "gulp-rigger": "^0.5.8",
     "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.1",
     "gulp-uglify": "^3.0.0"
   }
 }
