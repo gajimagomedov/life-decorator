@@ -94,3 +94,11 @@ gulp.task('fonts:build', () => {
     gulp.src(path.src.fonts)
         .pipe(gulp.dest(path.build.fonts))
 });
+
+gulp.task('build', [
+    'html:build',
+    'js:build',
+    'style:build',
+    'fonts:build',
+    'image:build'
+]);
