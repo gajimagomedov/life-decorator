@@ -5,8 +5,9 @@ let gulp        = require('gulp'),
     babel 	    = require('gulp-babel'),
     imagemin    = require('gulp-imagemin'),
     cleanCSS    = require('gulp-clean-css')
-    browserSync = require("browser-sync"),
+    browserSync = require('browser-sync'),
     rigger      = require('gulp-rigger'),
+    sourcemaps  = require('gulp-sourcemaps'),
     reload      = browserSync.reload;
 
 
@@ -63,4 +64,15 @@ gulp.task('js:build', function () {
         .pipe(sourcemaps.write()) 
         .pipe(gulp.dest(path.build.js)) 
         .pipe(reload({stream: true})); 
+});
+
+gulp.task('style:build', function () {
+    gulp.src(path.src.style) 
+        .pipe(sourcemaps.init()) 
+        .pipe(sass()) 
+        .pipe(prefixer()) 
+        .pipe(cleanCSS()) 
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(path.build.css)) //И в build
+        .pipe(reload({stream: true}));
 });
