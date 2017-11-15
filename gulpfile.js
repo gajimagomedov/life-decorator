@@ -1,14 +1,15 @@
-let gulp = require('gulp'),
-    prefixer = require('gulp-autoprefixer'),
-    uglify = require('gulp-uglify'),
-    sass = require('gulp-sass'),
-    babel = require('gulp-babel'),
-    imagemin = require('gulp-imagemin'),
-    pngquant = require('imagemin-pngquant'),
-    cleanCSS = require('gulp-clean-css')
-browserSync = require('browser-sync'),
-    rigger = require('gulp-rigger'),
-    sourcemaps = require('gulp-sourcemaps'),
+let gulp        = require('gulp'),
+    prefixer    = require('gulp-autoprefixer'),
+    uglify      = require('gulp-uglify'),
+    sass        = require('gulp-sass'),
+    babel		= require('gulp-babel'),
+    imagemin    = require('gulp-imagemin'),
+    pngquant    = require('imagemin-pngquant'),
+    cleanCSS    = require('gulp-clean-css')
+    browserSync = require('browser-sync'),
+    rigger      = require('gulp-rigger'),
+    sourcemaps  = require('gulp-sourcemaps'),
+    watch       = require('gulp-watch'),
     reload = browserSync.reload;
 
 
@@ -102,3 +103,21 @@ gulp.task('build', [
     'fonts:build',
     'image:build'
 ]);
+
+gulp.task('watch', () => {
+    watch([path.watch.html], (event, cb) => {
+        gulp.start('html:build');
+    });
+    watch([path.watch.style], (event, cb) => {
+        gulp.start('style:build');
+    });
+    watch([path.watch.js], (event, cb) => {
+        gulp.start('js:build');
+    });
+    watch([path.watch.img], (event, cb) => {
+        gulp.start('image:build');
+    });
+    watch([path.watch.fonts], (event, cb) => {
+        gulp.start('fonts:build');
+    });
+});
