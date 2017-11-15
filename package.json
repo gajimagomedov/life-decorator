@@ -1,0 +1,30 @@
+{
+  "name": "life-decorator",
+  "version": "1.0.0",
+  "description": "App for news ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gus3inov/life-decorator.git"
+  },
+  "author": "Muslim Guseinov and Islam Gadzhimagomedov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gus3inov/life-decorator/issues"
+  },
+  "homepage": "https://github.com/gus3inov/life-decorator#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-babel": "^7.0.0",
+    "gulp-clean-css": "^3.9.0",
+    "gulp-imagemin": "^3.4.0",
+    "gulp-rigger": "^0.5.8",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^3.0.0"
+  }
+}
