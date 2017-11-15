@@ -9,8 +9,9 @@ let gulp        = require('gulp'),
     browserSync = require('browser-sync'),
     rigger      = require('gulp-rigger'),
     sourcemaps  = require('gulp-sourcemaps'),
+    rimraf      = require('rimraf'),
     watch       = require('gulp-watch'),
-    reload = browserSync.reload;
+    reload      = browserSync.reload;
 
 
 let path = {
@@ -120,4 +121,12 @@ gulp.task('watch', () => {
     watch([path.watch.fonts], (event, cb) => {
         gulp.start('fonts:build');
     });
+});
+
+gulp.task('webserver', () => {
+    browserSync(config);
+});
+
+gulp.task('clean', cb => {
+    rimraf(path.clean, cb);
 });
