@@ -1,32 +1,33 @@
-let gulp        = require('gulp'),
-    prefixer    = require('gulp-autoprefixer'),
-    uglify      = require('gulp-uglify'),
-    sass        = require('gulp-sass'),
-    babel 	    = require('gulp-babel'),
-    imagemin    = require('gulp-imagemin'),
-    cleanCSS    = require('gulp-clean-css')
-    browserSync = require('browser-sync'),
-    rigger      = require('gulp-rigger'),
-    sourcemaps  = require('gulp-sourcemaps'),
-    reload      = browserSync.reload;
+let gulp = require('gulp'),
+    prefixer = require('gulp-autoprefixer'),
+    uglify = require('gulp-uglify'),
+    sass = require('gulp-sass'),
+    babel = require('gulp-babel'),
+    imagemin = require('gulp-imagemin'),
+    pngquant = require('imagemin-pngquant'),
+    cleanCSS = require('gulp-clean-css')
+browserSync = require('browser-sync'),
+    rigger = require('gulp-rigger'),
+    sourcemaps = require('gulp-sourcemaps'),
+    reload = browserSync.reload;
 
 
 let path = {
-    build: { 
+    build: {
         html: 'build/',
         js: 'build/js/',
         css: 'build/css/',
         img: 'build/img/',
         fonts: 'build/fonts/'
     },
-    src: { 
-        html: 'src/*.html', 
+    src: {
+        html: 'src/*.html',
         js: 'src/js/main.js',
         style: 'src/css/main.sass',
-        img: 'src/img/**/*.*', 
+        img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
-    watch: { 
+    watch: {
         html: 'src/**/*.html',
         js: 'src/js/**/*.js',
         style: 'src/style/**/*.scss',
@@ -46,33 +47,45 @@ let config = {
     logPrefix: "life-decorator"
 };
 
-gulp.task('html:build', function () {
+gulp.task('html:build', () => {
     gulp.src(path.src.html)
-        .pipe(rigger()) 
-        .pipe(gulp.dest(path.build.html)) 
-        .pipe(reload({stream: true}));
+        .pipe(rigger())
+        .pipe(gulp.dest(path.build.html))
+        .pipe(reload({ stream: true }));
 });
 
-gulp.task('js:build', function () {
-    gulp.src(path.src.js) 
-        .pipe(rigger()) 
-        .pipe(sourcemaps.init()) 
+gulp.task('js:build', () => {
+    gulp.src(path.src.js)
+        .pipe(rigger())
+        .pipe(sourcemaps.init())
         .pipe(uglify())
         .pipe(babel({
-		presets: ['env']
-		})) 
-        .pipe(sourcemaps.write()) 
-        .pipe(gulp.dest(path.build.js)) 
-        .pipe(reload({stream: true})); 
+            presets: ['env']
+        }))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(path.build.js))
+        .pipe(reload({ stream: true }));
 });
 
-gulp.task('style:build', function () {
-    gulp.src(path.src.style) 
-        .pipe(sourcemaps.init()) 
-        .pipe(sass()) 
-        .pipe(prefixer()) 
-        .pipe(cleanCSS()) 
+gulp.task('style:build', () => {
+    gulp.src(path.src.style)
+        .pipe(sourcemaps.init())
+        .pipe(sass())
+        .pipe(prefixer())
+        .pipe(cleanCSS())
         .pipe(sourcemaps.write())
-        .pipe(gulp.dest(path.build.css)) //И в build
-        .pipe(reload({stream: true}));
+        .pipe(gulp.dest(path.build.css))
+        .pipe(reload({ stream: true }));
+});
+
+gulp.task('image:build', () => {
+    gulp.src(path.src.img)
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{ removeViewBox: false }],
+            use: [pngquant()],
+            interlaced: true
+        }))
+        .pipe(gulp.dest(path.build.img))
+        .pipe(reload({ stream: true }));
 });
