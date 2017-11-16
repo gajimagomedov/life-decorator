@@ -1,0 +1,23 @@
+{
+  "name": "life-decorator",
+  "description": "Blog for life",
+  "main": "index.js",
+  "authors": [
+    "Muslim Guseinov and Islam Gadzhimagomedov"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/gus3inov/life-decorator",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "hammerjs": "^2.0.8",
+    "jquery": "^3.2.1",
+    "gsap": "^1.20.3"
+  }
+}
