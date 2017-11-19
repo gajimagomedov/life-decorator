@@ -1,0 +1,16 @@
+<svg width="23" height="23" viewBox="0 0 23 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>search</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-705 198)">
+<g id="search" opacity="0.5">
+<use xlink:href="#path0_fill" fill="url(#pattern0)" transform="translate(705 -198)"/>
+</g>
+</g>
+<defs>
+<pattern id="pattern0" patternUnits="objectBoundingBox" patternContentUnits="objectBoundingBox" width="1" height="1">
+<use xlink:href="#image0" transform="matrix(0.03125 0 0 0.03125 0 0)"/>
+</pattern>
+<path id="path0_fill" d="M 0 0L 23 0L 23 23L 0 23L 0 0Z"/>
+<image id="image0" width="32" height="32" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAQAAADZc7J/AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QAAKqNIzIAAAAJcEhZcwAADdcAAA3XAUIom3gAAAAHdElNRQfhCgwLIAyBzUL2AAABl0lEQVRIx+WVzytEURzFz/NjSmmUkiFlJyGJmdQs1GRSiKxs/Q9SdrNhr2yUHckfoCgWrCzGjGhK3kopCyUWRIO8jwUpM/e+O1g6u3fPO597vt96PemP8szHtKlfdzrxHn/II8Ic21zzoTfOWCNdebyPwmf0hl1yPH8+rRJ1h6vJ8AL4TNP+1aefDEXg0tmDDBCwRF2Z00UeKNIVXv6FgDGLW8MGkKXavroCsBRyQZRLYN5mzwF+eflv7wwTUKTZbG4D08417wBTpadVkqQBSVkXQFlJCRO5DbhxxsU4sGcyJoHdCgAtwK1phDtJjW6AGiXdmwAnCtRLxAmISzo1ALxH+Yqo1wkYsAAk5SVNODZQqxFJR2YzDTzTEwpYALJ4NnsFyFFjjcd5JWDQzq/nAtikwRK/ANbCZxziCbhitHR2FngF4JxYOKKDQwD2WWSSVrqZYRkfCFjnvBJEFbM8UapjkhIxM6JsqzQpqYQSiutBBRWU15YXSBIxHahTvlLetX4nW4t/jXD/bhyI1K8BElFS1k/rJ3oHAPleMHx+fUUAAAAldEVYdGRhdGU6Y3JlYXRlADIwMTctMTAtMTJUMTE6MzI6MTIrMDI6MDBWc+MaAAAAJXRFWHRkYXRlOm1vZGlmeQAyMDE3LTEwLTEyVDExOjMyOjEyKzAyOjAwJy5bpgAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAAASUVORK5CYII="/>
+</defs>
+</svg>
