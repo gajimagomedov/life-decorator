@@ -22,75 +22,116 @@ a
 		text-decoration: none
 		color: #000
 
+h1, h2, h3, h4, h5, h6
+	margin: 0
 
 button
 	background-color: transparent
 	border: none
 	cursor: pointer
 
-
-.dec-header
+.dec-column
 	display: -webkit-flex
 	display: -moz-flex
 	display: -ms-flex
 	display: -o-flex
 	display: flex
 	flex-direction: column
-	&__main
-		background-color: $blackBlock
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		justify-content: space-between
-		padding: 20px 100px
-		align-items: center
-		height: 70px
+
+.dec-row
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	margin: 20px 0
+
+.dec-container
+	margin: 20px 100px
+
+
+.dec-slider
+	background-color: #FFF
+	width: 100%	
+	height: 500px
+
+.dec-blog
+	width: 100%
+	margin-top: 30px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+	.col-2
 		width: 100%
-		box-sizing: border-box
-		&_soc
-			a
-				margin: 0 2px
-				i
-					width: 30px
-					height: 30px
-					line-height: 30px
-					text-align: center
-					border-radius: 50%
-					background-color: #5A5A5A
-					color: $blackFont
-					-webkit-transition: all 0.3s ease-in-out
-					-moz-transition: all 0.3s ease-in-out
-					-ms-transition: all 0.3s ease-in-out
-					-o-transition: all 0.3s ease-in-out
-					transition: all 0.3s ease-in-out
-					&:hover
-						background-color: #fff
-		&_logo
-			width: 300px
-			position: relative
-			right: 38px
-			img
-				width: 100%
-	&__menu
+		background-color: $grey
+		min-height: 350px
+	.col-1
+		width: 49%
+		background-color: $grey
+		min-height: 200px;
+	&__item
+		position: relative
+		overflow: hidden
+		cursor: pointer
+		&_title
+			text-align: center
+			font-size: 62px
+		.item-descr
+			position: absolute
+			bottom: -70px
+			-webkit-transition: all 0.3s ease-in-out
+			-moz-transition: all 0.3s ease-in-out
+			-ms-transition: all 0.3s ease-in-out
+			-o-transition: all 0.3s ease-in-out
+			transition: all 0.3s ease-in-out
+			padding: 20px 20px
+		&:hover .item-descr
+			bottom: 0
+	.dec-blog-items
+		width: 100%
+	.dec-recomend
+		width: 420px
+		text-align: center
+		margin-left: 30px
+		padding: 20px 30px
 		background-color: #fff
-		padding: 20px 100px
-		height: 70px
-		box-sizing: border-box
-		width: 100%
-		display: -webkit-flex
-		display: -moz-flex
-		display: -ms-flex
-		display: -o-flex
-		display: flex
-		justify-content: space-between
-		a
-			font-size: 15px
-			text-transform: uppercase
+		font-family: sans-serif
+		&__title
+			font-size: 20px
 			font-weight: bold
-			transition: 0.22s
-			&:hover
-				color: $orange
+			margin-top: 10px
+		&__items
+			ul, li
+				list-style-type: none
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				align-items: flex-start
+				margin: 30px 0
+				.number
+					font-size: 27px
+					color: #BDBDBD
+					font-weight: bold
+					transition: all 0.2s ease-in-out
+				.title
+					font-size: 16px
+					font-weight: bold
+					text-align: left
+					margin-left: 14px
+					transition: all 0.2s ease-in-out
+				&:hover
+					.title
+						color: $orange
+					.number
+						color: #828282
+
+
 
 
