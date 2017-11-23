@@ -63,9 +63,6 @@ gulp.task('js:build', () => {
         .pipe(sourcemaps.init())
         .pipe(uglify())
         .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
-        .pipe(babel({
-            presets: ['env']
-        }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({ stream: true }));
