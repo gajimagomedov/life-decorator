@@ -113,6 +113,9 @@ button
 .slick-dots .slick-active button
 	background-color: #FFF
 
+.slick-slide
+	min-height: 0px !important
+
 .slick-dots
   position: absolute
   bottom: 24px
@@ -175,7 +178,26 @@ button
 	.col-1
 		width: 49%
 		background-color: $grey
-		min-height: 200px;
+		min-height: 200px
+		-webkit-transition: all 0.3s ease-in-out
+		-moz-transition: all 0.3s ease-in-out
+		-ms-transition: all 0.3s ease-in-out
+		-o-transition: all 0.3s ease-in-out
+		transition: all 0.3s ease-in-out		
+		.item-descr
+			bottom: -140px
+			p
+				opacity: 0
+				-webkit-transition: all 0.3s ease-in-out
+				-moz-transition: all 0.3s ease-in-out
+				-ms-transition: all 0.3s ease-in-out
+				-o-transition: all 0.3s ease-in-out
+				transition: all 0.3s ease-in-out
+		&:hover
+			.item-descr
+				bottom: 0
+				p
+					opacity: 1
 	&__item
 		position: relative
 		overflow: hidden
@@ -190,14 +212,26 @@ button
 		.item-descr
 			position: absolute
 			bottom: -70px
+			z-index: 1000
 			-webkit-transition: all 0.3s ease-in-out
 			-moz-transition: all 0.3s ease-in-out
 			-ms-transition: all 0.3s ease-in-out
 			-o-transition: all 0.3s ease-in-out
 			transition: all 0.3s ease-in-out
 			padding: 20px 20px
-		&:hover .item-descr
-			bottom: 0
+				h2
+					-webkit-transition: all 0.3s ease-in-out
+					-moz-transition: all 0.3s ease-in-out
+					-ms-transition: all 0.3s ease-in-out
+					-o-transition: all 0.3s ease-in-out
+					transition: all 0.3s ease-in-out
+			&:hover
+				background-color: rgba(0,0,0,.2)
+		&:hover 
+			.item-descr
+				bottom: 0
+				h2
+					color: $orange
 	.dec-blog-items
 		width: 100%
 	.dec-recomend
