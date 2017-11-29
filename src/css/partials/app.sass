@@ -14,7 +14,7 @@ body
   height: 0.4em
 
 \::-webkit-scrollbar-thumb
-  background: $orange
+  background: $blackBlock
   border-radius: 20px
 
 \::-webkit-scrollbar-track
@@ -35,7 +35,7 @@ a
 		text-decoration: none
 		color: #000
 
-h1, h2, h3, h4, h5, h6
+h1, h2, h3, h4, h5, h6, p
 	margin: 0
 
 button
@@ -135,6 +135,8 @@ button
     position: relative;
 	&__item
 		position: relative
+		img
+			width: 100%
 		.item-info
 			position: absolute
 			bottom: 40px
@@ -185,7 +187,7 @@ button
 		-o-transition: all 0.3s ease-in-out
 		transition: all 0.3s ease-in-out		
 		.item-descr
-			bottom: -140px
+			bottom: -100px
 			p
 				opacity: 0
 				-webkit-transition: all 0.3s ease-in-out
@@ -219,12 +221,12 @@ button
 			-o-transition: all 0.3s ease-in-out
 			transition: all 0.3s ease-in-out
 			padding: 20px 20px
-				h2
-					-webkit-transition: all 0.3s ease-in-out
-					-moz-transition: all 0.3s ease-in-out
-					-ms-transition: all 0.3s ease-in-out
-					-o-transition: all 0.3s ease-in-out
-					transition: all 0.3s ease-in-out
+			h2
+				-webkit-transition: all 0.3s ease-in-out
+				-moz-transition: all 0.3s ease-in-out
+				-ms-transition: all 0.3s ease-in-out
+				-o-transition: all 0.3s ease-in-out
+				transition: all 0.3s ease-in-out
 			&:hover
 				background-color: rgba(0,0,0,.2)
 		&:hover 

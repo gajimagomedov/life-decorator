@@ -18,7 +18,8 @@
 		height: 70px
 		width: 100%
 		box-sizing: border-box
-		&_soc
+		position: relative
+		.main-soc
 			a
 				margin: 0 2px
 				i
@@ -36,11 +37,51 @@
 					transition: all 0.3s ease-in-out
 					&:hover
 						background-color: #fff
-		&_logo
+		.main-logo
 			width: 300px
 			margin-right: 5%
 			img
 				width: 100%
+		.main-search__input
+			position: absolute
+			right: 100px
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+			height: 100%
+			background-color: #1a1a1a
+			padding: 0 20px
+			box-sizing: border-box
+			visibility: hidden
+			opacity: 0
+			-webkit-transition: all 0.3s ease-in-out
+			-moz-transition: all 0.3	s ease-in-out
+			-ms-transition: all 0.3s ease-in-out
+			-o-transition: all 0.3s ease-in-out
+			transition: all 0.3s ease-in-out
+			z-index: 0
+			&:hover
+				background-color: #262626
+			input
+				width: 300px
+				height: 35px
+				border: none
+				background: $blackBlock		
+				color: #fff
+				text-indent: 10px
+				font-size: 18px
+			button
+				font-size: 40px
+				color: #fff
+				margin-left: 10px
+		.main-search__input.visible
+			visibility: visible
+			opacity: 1
+			z-index: 1000
+
 	&__menu
 		background-color: #fff
 		padding: 20px 100px
