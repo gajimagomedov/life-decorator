@@ -12,7 +12,7 @@
 <body>
     <header class="dec-header">
       <div class="dec-header__main">
-      	  <div class="dec-header__main_soc">
+      	  <div class="main-soc">
         	<a href="#">
         		<!-- <img src="../img/icons/vk.svg" alt=""> -->
         		<i class="fa fa-vk" aria-hidden="true"></i>
@@ -26,13 +26,17 @@
         	<i class="fa fa-instagram" aria-hidden="true"></i>
         	</a>
         </div>
-        <div class="dec-header__main_logo">
+        <div class="main-logo">
         	<img src="../img/logo.svg" alt="">
         </div>
-        <div class="dec-header__main_search">
+        <div class="main-search__button">
         	<button id="openSearch" class="search">
         		<img src="../img/icons/search.svg" alt="">
         	</button>
+        </div>
+        <div class="main-search__input">
+          <input type="text">
+          <button id="closeSearch">×</button>
         </div>
       </div>
       <div class="dec-header__menu">
@@ -120,7 +124,7 @@
     <section class="dec-blog">
         <div class="dec-blog-items">
             <div class="dec-column">
-                <div class="dec-blog__item col-2">
+                <article class="dec-blog__item col-2">
                     <h2 class="dec-blog__item_title">779 x 367</h2>
                     <div class="item-descr">
                         <span class="item-descr__date">
@@ -133,9 +137,9 @@
                             Lorem ipsum dolor sit amet, consectetur adipisicing elit. A eos quidem laudantium, maxime, nobis repellendus exercitationem provident beatae. At, assumenda?
                         </p>
                     </div>
-                </div>
+                </article>
                 <div class="dec-row">
-                    <div class="dec-blog__item col-1">
+                    <article class="dec-blog__item col-1">
                         <h2 class="dec-blog__item_title">382 x 200 </h2>
                         <div class="item-descr">
                             <span class="item-descr__date">
@@ -148,8 +152,8 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A eos quidem laudantium, maxime, nobis repellendus exercitationem provident beatae. At, assumenda?
                             </p>
                         </div>
-                    </div>
-                    <div class="dec-blog__item col-1">
+                    </article>
+                    <article class="dec-blog__item col-1">
                         <h2 class="dec-blog__item_title">382 x 200 </h2>
                         <div class="item-descr">
                             <span class="item-descr__date">
@@ -162,7 +166,7 @@
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. A eos quidem laudantium, maxime, nobis repellendus exercitationem provident beatae. At, assumenda?
                             </p>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </div>
