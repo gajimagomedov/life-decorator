@@ -6,4 +6,14 @@ $(document).ready(function(){
         prevArrow: '<div class="wrapp-slick__button prev"><button type="button" class="slick-prev"></button></div>',
         nextArrow: '<div class="wrapp-slick__button next"><button type="button" class="slick-next"></button></div>'
     });
+
+    $('#openSearch').on('click', ()=>{
+    	$('.main-search__input').addClass('visible');
+    })
+
+    $('#closeSearch').on('click', ()=>{
+    	$('.main-search__input').removeClass('visible');
+    })
+
+
 });
