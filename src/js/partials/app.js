@@ -7,11 +7,11 @@ $(document).ready(function(){
         nextArrow: '<div class="wrapp-slick__button next"><button type="button" class="slick-next"></button></div>'
     });
 
-    $('#openSearch').on('click', ()=>{
+    $('#openSearch').on('click', function (){
     	$('.main-search__input').addClass('visible');
     })
 
-    $('#closeSearch').on('click', ()=>{
+    $('#closeSearch').on('click', function (){
     	$('.main-search__input').removeClass('visible');
     })
 
