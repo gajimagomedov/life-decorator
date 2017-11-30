@@ -11,6 +11,7 @@ let gulp        = require('gulp'),
     sourcemaps  = require('gulp-sourcemaps'),
     rimraf      = require('rimraf'),
     watch       = require('gulp-watch'),
+    plumber     = require('gulp-plumber');
     gutil       = require('gulp-util');
     reload      = browserSync.reload;
 
@@ -52,6 +53,7 @@ let config = {
 
 gulp.task('html:build', () => {
     gulp.src(path.src.html)
+    .pipe(plumber())
         .pipe(rigger())
         .pipe(gulp.dest(path.build.html))
         .pipe(reload({ stream: true }));
@@ -59,6 +61,7 @@ gulp.task('html:build', () => {
 
 gulp.task('js:build', () => {
     gulp.src(path.src.js)
+    .pipe(plumber())
         .pipe(rigger())
         .pipe(sourcemaps.init())
         .pipe(uglify())
@@ -70,6 +73,7 @@ gulp.task('js:build', () => {
 
 gulp.task('style:build', () => {
     gulp.src(path.src.style)
+    .pipe(plumber())
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(prefixer())
@@ -81,6 +85,7 @@ gulp.task('style:build', () => {
 
 gulp.task('image:build', () => {
     gulp.src(path.src.img)
+    .pipe(plumber())
         .pipe(imagemin({
             progressive: true,
             svgoPlugins: [{ removeViewBox: false }],
@@ -93,6 +98,7 @@ gulp.task('image:build', () => {
 
 gulp.task('fonts:build', () => {
     gulp.src(path.src.fonts)
+    .pipe(plumber())
         .pipe(gulp.dest(path.build.fonts))
 });
 
