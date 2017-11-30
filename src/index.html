@@ -3,15 +3,19 @@
 
 <head lang="ru">
     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Декоратор жизни</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/media.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
 </head>
 
 <body>
     //= template/header.html
-    <section class="dec-pannel">
+    <main class="dec-container">
+    <section class="dec-pannel dec-block__container">
              <div class="dec-slider">
             <div class="dec-slider__item">
                 <div class="item-info">
@@ -85,7 +89,7 @@
     </section>
 
    <main class="dec-wrapper">
-    <section class="dec-blog">
+    <section class="dec-blog dec-block__container">
         <div class="dec-blog-items">
             <div class="dec-column">
                 <article class="dec-blog__item col-2">
@@ -160,10 +164,10 @@
             </ul>
         </div>
     </section>
-    <section class="block">1170 x 100</section>
+    <section class="block dec-block__container">1170 x 100</section>
     <section class="dec-events">
        <h3 class="dec-events__title">Ближайшие мероприятия</h3>
-       <div class="dec-events__items">
+       <div class="dec-events__items dec-block-container">
           <div class="item">
              <div class="item-img">
                 177 x 248
@@ -216,6 +220,65 @@
           </div>
        </div>
     </section>
+    <section class="dec-blog dec-block-container">
+        <div class="dec-blog-items">
+            <div class="dec-column">
+                <article class="dec-blog__item col-2">
+                    <h2 class="dec-blog__item_title">779 x 367</h2>
+                    <div class="item-descr">
+                        <span class="item-descr__date">
+                  8 августа
+               </span>
+                        <h2 class="item-descr__title">
+                  Из жизни канатоходцев
+               </h2>
+                        <p class="item-descr__text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. A eos quidem laudantium, maxime, nobis repellendus exercitationem provident beatae. At, assumenda?
+                        </p>
+                    </div>
+                </article>
+                <div class="dec-row">
+                    <article class="dec-blog__item col-1">
+                        <h2 class="dec-blog__item_title">382 x 200 </h2>
+                        <div class="item-descr">
+                            <span class="item-descr__date">
+                  8 августа
+               </span>
+                            <h2 class="item-descr__title">
+                  Из жизни канатоходцев
+               </h2>
+                            <p class="item-descr__text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A eos quidem laudantium, maxime, nobis repellendus exercitationem provident beatae. At, assumenda?
+                            </p>
+                        </div>
+                    </article>
+                    <article class="dec-blog__item col-1">
+                        <h2 class="dec-blog__item_title">382 x 200 </h2>
+                        <div class="item-descr">
+                            <span class="item-descr__date">
+                                8 августа
+                            </span>
+                            <h2 class="item-descr__title">
+                                Из жизни канатоходцев
+                            </h2>
+                            <p class="item-descr__text">
+                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. A eos quidem laudantium, maxime, nobis repellendus exercitationem provident beatae. At, assumenda?
+                            </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+
+            <div class="dec-column col-1">
+                <article class="dec-blog__item col-1">
+                 <h2 class="dec-blog__item_title">382 x 170 </h2>
+                </article>
+            </div>
+
+  
+    </section>
+ </main>
  </main>
 
     <script src="js/main.js"></script>
