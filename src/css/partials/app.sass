@@ -51,6 +51,12 @@ button
 	border: none
 	cursor: pointer
 
+.dec-container
+	margin-top: 160px
+
+.dec-block-container
+	width: 1100px
+
 .dec-column
 	display: -webkit-flex
 	display: -moz-flex
@@ -170,6 +176,48 @@ button
 						color: $orange 
 
 
+.dec-blog__item
+	position: relative
+	overflow: hidden
+	cursor: pointer
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	&_title
+		text-align: center
+		font-size: 62px
+	.item-descr
+		position: absolute
+		bottom: -70px
+		z-index: 1000
+		-webkit-transition: all 0.3s ease-in-out
+		-moz-transition: all 0.3s ease-in-out
+		-ms-transition: all 0.3s ease-in-out
+		-o-transition: all 0.3s ease-in-out
+		transition: all 0.3s ease-in-out
+		padding: 20px 20px
+		h2
+			-webkit-transition: all 0.3s ease-in-out
+			-moz-transition: all 0.3s ease-in-out
+			-ms-transition: all 0.3s ease-in-out
+			-o-transition: all 0.3s ease-in-out
+			transition: all 0.3s ease-in-out
+		&:hover
+			background-color: rgba(0,0,0,.2)
+	&:hover 
+		.item-descr
+			bottom: 0
+			h2
+				color: $orange
+
+.col-1
+	width: 49%
+.col-2
+	width: 70%
+
+.dec-block__container
+	width: 1100px
 
 .dec-blog
 	margin: $marginWrapp
@@ -181,18 +229,11 @@ button
 	justify-content: space-between
 	align-items: flex-start
 	.col-2
-		width: 100%
 		background-color: $grey
 		min-height: 350px
 	.col-1
-		width: 49%
 		background-color: $grey
-		min-height: 200px
-		-webkit-transition: all 0.3s ease-in-out
-		-moz-transition: all 0.3s ease-in-out
-		-ms-transition: all 0.3s ease-in-out
-		-o-transition: all 0.3s ease-in-out
-		transition: all 0.3s ease-in-out		
+		min-height: 200px		
 		.item-descr
 			bottom: -100px
 			p
@@ -207,40 +248,7 @@ button
 				bottom: 0
 				p
 					opacity: 1
-	&__item
-		position: relative
-		overflow: hidden
-		cursor: pointer
-		display: flex
-		flex-direction: column
-		align-items: center
-		justify-content: center
-		&_title
-			text-align: center
-			font-size: 62px
-		.item-descr
-			position: absolute
-			bottom: -70px
-			z-index: 1000
-			-webkit-transition: all 0.3s ease-in-out
-			-moz-transition: all 0.3s ease-in-out
-			-ms-transition: all 0.3s ease-in-out
-			-o-transition: all 0.3s ease-in-out
-			transition: all 0.3s ease-in-out
-			padding: 20px 20px
-			h2
-				-webkit-transition: all 0.3s ease-in-out
-				-moz-transition: all 0.3s ease-in-out
-				-ms-transition: all 0.3s ease-in-out
-				-o-transition: all 0.3s ease-in-out
-				transition: all 0.3s ease-in-out
-			&:hover
-				background-color: rgba(0,0,0,.2)
-		&:hover 
-			.item-descr
-				bottom: 0
-				h2
-					color: $orange
+
 	.dec-blog-items
 		width: 100%
 	.dec-recomend
@@ -313,7 +321,6 @@ button
 		display: -o-flex
 		display: flex
 		margin-top: 40px
-		width: 100%
 		justify-content: space-between
 		.item
 			width: 177px
@@ -364,7 +371,6 @@ button
 					color: $orange
 				.item-info__date, .item-info__link
 					opacity: 1
-
 
 
 
