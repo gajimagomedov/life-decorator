@@ -15,5 +15,17 @@ $(document).ready(function(){
     	$('.main-search__input').removeClass('visible');
     })
 
+    var lastScrollTop = 0;
+
+    $(window).scroll(function(event){
+       var st = $(this).scrollTop();
+       if (st > lastScrollTop){
+          $('.dec-header__nav').addClass('subnavbar_close');
+       } else {
+           
+            $('.dec-header__nav').removeClass('subnavbar_close');
+       }
+       lastScrollTop = st;
+    });
 
 });
